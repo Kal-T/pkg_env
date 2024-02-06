@@ -3,3 +3,8 @@ exports/el7/
 exports/el8/
 exports/el9/
 src/
+
+#Ignore RPMBUILD sources and srpms
+el7/rpmbuild/BUILD/
+el7/rpmbuild/SOURCES/
+el7/rpmbuild/SRPMS/
