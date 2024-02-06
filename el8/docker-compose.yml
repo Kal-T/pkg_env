@@ -3,7 +3,8 @@ version: '3'
 services:
 
   rhel8:
-    image: zukidocker/oss:rpm_env
-    container_name: rpm_env
+    image: ikal/oss:rhel8
+    container_name: rpm_env_rhel8
     volumes:
-      - ./rpmbuild:/home/moon/rpmbuild
+      - ./rpmbuild:/home/dat/rpmbuild
+    command: tail -f /dev/null

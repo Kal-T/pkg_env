@@ -1,4 +1,4 @@
 #!/bin/bash
 
-docker exec -it --user root rhel7_rpm_env chown -R moon.moon /home/moon/rpmbuild/
-docker exec -it --user moon rhel7_rpm_env ./tmp/build_7.sh
+docker exec -it --user root rpm_env_rhel7 chown -R moon.moon /home/moon/rpmbuild/
+docker exec -it --user moon rpm_env_rhel7 ./tmp/build_7.sh

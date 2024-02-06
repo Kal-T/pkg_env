@@ -4,6 +4,6 @@ services:
 
   rhel7:
     image: zukidocker/oss:rhel7_rpm_env
-    container_name: rhel7_rpm_env
+    container_name: rpm_env_rhel7
     volumes:
       - ./rpmbuild:/home/moon/rpmbuild
