@@ -1,4 +1,5 @@
 # Ignore source and exports file
+exports/el6/
 exports/el7/
 exports/el8/
 exports/el9/
