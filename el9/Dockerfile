@@ -29,4 +29,9 @@ RUN cd /tmp/libtar-1.2.20/ && \
     ./configure --with-pic &&  \
     make && make install
 
+# Create a user and group
+RUN groupadd -r dat && useradd -r -g dat dat
+
+USER dat
+
 CMD [ "./tmp/sleep10.sh" ]

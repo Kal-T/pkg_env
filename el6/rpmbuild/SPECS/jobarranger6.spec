@@ -1,4 +1,4 @@
-%define         version 6.0.4
+%define         version 6.1.1
 
 Name:           jobarranger
 Version:        %{version}
