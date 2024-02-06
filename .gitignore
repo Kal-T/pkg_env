@@ -15,10 +15,12 @@ el7/rpmbuild/RPMS/
 el7/rpmbuild/SOURCES/
 el7/rpmbuild/SRPMS/
 el8/rpmbuild/BUILD/
+el8/rpmbuild/BUILDROOT/
 el8/rpmbuild/RPMS/
 el8/rpmbuild/SOURCES/
 el8/rpmbuild/SRPMS/
 el9/rpmbuild/BUILD/
+el9/rpmbuild/BUILDROOT/
 el9/rpmbuild/RPMS/
 el9/rpmbuild/SOURCES/
 el9/rpmbuild/SRPMS/
