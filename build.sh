@@ -18,9 +18,9 @@ if [ -f "./src/$src_name.tar.gz" ]; then
     cd ./src
 else
     rm -rf ./src/*gz
-    if [[ "$src_folder" != "$src_name" ]]; then
-        mv ./src/$src_folder ./src/$src_name
-    fi
+    # if [[ "$src_folder" != "$src_name" ]]; then
+    #     mv ./src/$src_folder ./src/$src_name
+    # fi
     cd ./src
     tar cvzf "$src_name.tar.gz" $src_name/
 fi
@@ -29,6 +29,7 @@ cp -f "$src_name.tar.gz" ../el6/rpmbuild/SOURCES/
 cp -f "$src_name.tar.gz" ../el7/rpmbuild/SOURCES/
 cp -f "$src_name.tar.gz" ../el8/rpmbuild/SOURCES/
 cp -f "$src_name.tar.gz" ../el9/rpmbuild/SOURCES/
+
 
 cd ..
 
