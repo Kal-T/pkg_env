@@ -1,0 +1,12 @@
+Source: jobarranger-manager
+Section: web
+Priority: optional
+Maintainer: Daiwa Institute of Research Ltd
+Build-Depends: debhelper (>= 12)
+
+Package: jobarranger-manager
+Architecture: amd64
+Depends: php-common (>= 7.4), php-cli, php-curl, php-xml (>= 7.4), php-mbstring (>= 7.4), apache2, libapache2-mod-php7.4
+Description: Job Arranger Manager
+	Job Arranger Manager is a client terminal for editing job nets and checking job operation status. This package contains the Job Arranger Manager files and Apache configuration files.
+Homepage: https://www.jobarranger.info/redmine/

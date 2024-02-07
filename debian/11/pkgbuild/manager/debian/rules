@@ -1,0 +1,21 @@
+#!/usr/bin/make -f
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+%:
+	dh $@
+
+override_dh_auto_install:
+	dh_auto_install
+	dh_installsystemd
+	mkdir -p debian/jobarranger-manager/usr/share
+	mkdir -p debian/jobarranger-manager/etc/jobarranger/web
+	mkdir -p debian/jobarranger-manager/etc/apache2/conf-enabled
+	cp -a $(CURDIR)/src/jobarranger debian/jobarranger-manager/usr/share/
+	install -Dm 0644 -p $(CURDIR)/src/jam-cleanup.service debian/jobarranger-manager/lib/systemd/system/jam-cleanup.service
+	install -Dm 0644 -p $(CURDIR)/src/jobarranger-ui.conf debian/jobarranger-manager/etc/apache2/conf-enabled/jobarranger-ui.conf
+	install -Dm 0644 -p $(CURDIR)/src/jobarranger-api.conf debian/jobarranger-manager/etc/apache2/conf-enabled/jobarranger-api.conf
+
+override_dh_clean:
+	rm -rf debian/jobarranger-manager/

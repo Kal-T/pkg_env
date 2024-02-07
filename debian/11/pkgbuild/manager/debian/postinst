@@ -1,0 +1,21 @@
+#!/bin/bash
+
+set -e
+
+if [ "$1" = "configure" ]; then
+
+    # enable Apache configuration
+    #a2enconf jobarranger-ui jobarranger-api
+
+    # Enable the Apache2 rewrite and header module
+    a2enmod rewrite
+    a2enmod headers
+
+    # restart services
+    chown www-data.www-data /etc/jobarranger/web
+    systemctl daemon-reload
+    systemctl restart apache2
+    systemctl enable jam-cleanup.service
+
+    echo "JobArranger has been installed successfully"
+fi

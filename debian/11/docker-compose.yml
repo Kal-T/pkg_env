@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+
+  rhel8:
+    image: ikal/oss:debian11
+    container_name: rpm_env_debian11
+    volumes:
+      - ./pkgbuild:/home/dat/pkgbuild
+    command: tail -f /dev/null

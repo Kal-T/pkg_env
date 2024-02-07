@@ -1,0 +1,12 @@
+Package: jobarranger-server-postgresql-dbgsym
+Source: jobarranger
+Version: 6.1.1-1+debian11
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Daiwa Institute of Research Business Innovation Ltd.
+Installed-Size: 2083
+Depends: jobarranger-server-postgresql (= 6.1.1-1+debian11)
+Section: debug
+Priority: optional
+Description: debug symbols for jobarranger-server-postgresql
+Build-Ids: 09066854eeeaffa7e0d1e3376532a3d9fc0d485a 9c56e07d993360b780dcbb2bf6733705d6069d15 ae651b1e3aaa6ab3d209b4d785002fa21cbe7200 c0a71c3f71493925252cca1f2abc9daa3173710d ea707e1e94d26d09ff4a9ad1a04cb5407ca2836c fa0cad58f956036cabdb13dfa93d37397e16295b ff20db9f04cfc043011d9c2563229c3c98256db6

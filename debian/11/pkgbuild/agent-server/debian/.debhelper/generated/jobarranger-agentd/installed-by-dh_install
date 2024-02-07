@@ -1,0 +1,16 @@
+./AUTHORS
+./ChangeLog
+./COPYING
+./NEWS
+./README
+./debian/var/log/jobarranger/
+./debian/var/run/jobarranger/
+./debian/var/lib/jobarranger/tmp/
+./debian/etc/logrotate.d/jobarg-agentd
+./debian/tmpdir/usr/local/etc/jobarranger/jobarg_agentd.conf
+./debian/tmpdir/usr/local/etc/jobarranger/extendedjob/jobarg_command
+./debian/tmpdir/usr/local/etc/jobarranger/extendedjob/jafcheck.sh
+./debian/tmpdir/usr/local/etc/jobarranger/extendedjob/jafwait.sh
+./debian/tmpdir/usr/local/etc/jobarranger/extendedjob/jareboot.sh
+./debian/tmpdir/usr/local/sbin/jobarg_agentd
+./debian/usr/lib/systemd/system/jobarg-agentd.service
