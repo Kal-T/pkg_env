@@ -1,5 +1,6 @@
 # Ignore source and exports file
 exports/debian/11/*
+# exports/ubuntu/22.04/*
 exports/el6/*
 exports/el7/*
 exports/el8/*

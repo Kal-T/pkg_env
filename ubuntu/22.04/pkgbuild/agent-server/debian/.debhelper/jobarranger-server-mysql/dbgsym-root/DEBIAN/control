@@ -1,0 +1,13 @@
+Package: jobarranger-server-mysql-dbgsym
+Package-Type: ddeb
+Source: jobarranger
+Version: 6.1.1-1+ubuntu22.04
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Daiwa Institute of Research Business Innovation Ltd.
+Installed-Size: 3071
+Depends: jobarranger-server-mysql (= 6.1.1-1+ubuntu22.04)
+Section: debug
+Priority: optional
+Description: debug symbols for jobarranger-server-mysql
+Build-Ids: 0cd6cb82e9da9db2d4dd1126750ae69da2805bc1 3e24e4ec3768790b86752abef69413d38e1e5630 71bb02b454a9bd161d88fde26250a40b31b63ee9 7e77e1c6664d2200e05d52e5158abaac5314cac1 7f0417689aa567233cc42940dd407a3f04367ede ca3cb3c16533c91968371c73649176ef965f74af e5d0c4a0edc3ec1ef05767ed890c78c52deb7bdf

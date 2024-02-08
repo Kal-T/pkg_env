@@ -1,0 +1,32 @@
+#!/bin/sh
+
+set -e
+
+case "$1" in
+    remove|upgrade|deconfigure)
+        # Remove the configuration files
+        rm -f /etc/apache2/conf-available/jobarranger-ui.conf
+        rm -f /etc/apache2/conf-available/jobarranger-api.conf
+
+        # Disable the Apache configuration files
+        #a2disconf jobarranger-ui
+        #a2disconf jobarranger-api
+
+        # Reload Apache configuration
+        systemctl reload apache2
+
+        # Remove the systemd service file
+        systemctl stop jam-cleanup.service || true
+        systemctl disable jam-cleanup.service || true
+        rm -f /etc/systemd/system/jam-cleanup.service
+        systemctl daemon-reload
+
+        # Back up the existing jam.config.php file, if any
+        if [ -f /etc/jobarranger/web/jam.config.php ]; then
+            mv /etc/jobarranger/web/jam.config.php /etc/jobarranger/web/jam.config.php.debconf
+	    echo 'warning: /etc/jobarranger/web/jam.config.php saved as /etc/jobarranger/web/jam.config.php.debconf'
+        fi
+        ;;
+esac
+
+exit 0

@@ -1,0 +1,13 @@
+Package: jobarranger-server-postgresql-dbgsym
+Package-Type: ddeb
+Source: jobarranger
+Version: 6.1.1-1+ubuntu22.04
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Daiwa Institute of Research Business Innovation Ltd.
+Installed-Size: 3098
+Depends: jobarranger-server-postgresql (= 6.1.1-1+ubuntu22.04)
+Section: debug
+Priority: optional
+Description: debug symbols for jobarranger-server-postgresql
+Build-Ids: 02c9c2495dfc9d6607c203f2daddc6948b4c3667 0b208c1566fc7384ab8b3b8d947331c95641eb8c 67d84323de9f9bf576e389def8bc185ec5ce618a 796799c49b3039648cd0f2747f1687c39c679a2c 868e1aa140d1bc758837894860c2f5ba2a3218a0 bdc181798c799b41a5d53659a8f30fa188dc75fd d43e5e7d4bea93b8fbc6fceacc10552daf17c2d9

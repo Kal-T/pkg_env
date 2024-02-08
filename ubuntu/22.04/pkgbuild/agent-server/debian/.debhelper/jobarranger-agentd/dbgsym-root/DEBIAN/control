@@ -1,0 +1,13 @@
+Package: jobarranger-agentd-dbgsym
+Package-Type: ddeb
+Source: jobarranger
+Version: 6.1.1-1+ubuntu22.04
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Daiwa Institute of Research Business Innovation Ltd.
+Installed-Size: 368
+Depends: jobarranger-agentd (= 6.1.1-1+ubuntu22.04)
+Section: debug
+Priority: optional
+Description: debug symbols for jobarranger-agentd
+Build-Ids: 5285b0781437bf1854452977721c9b2e80156e1c 9d940af77a059df41532427be844c762dd383bec

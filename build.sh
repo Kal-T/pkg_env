@@ -78,6 +78,7 @@ done
 echo "Debian installer package creation start..."
 if [ -d "./src/$src_name" ]; then
     cp -R "./src/$src_name"/* ./debian/11/pkgbuild/agent-server/
+    cp -R "./src/$src_name"/* ./ubuntu/22.04/pkgbuild/agent-server/
 else
     echo "Folder $src_name does not exist. Cannot copy for agent-server source file."
 fi
@@ -90,9 +91,18 @@ else
 fi
 
 if [ $? -eq 0 ]; then
+    ./ubuntu/22.04/build_agent_server.sh
+else
+    echo "ubuntu22.04 failed. Return code: $?"
+    exit 69
+fi
+
+if [ $? -eq 0 ]; then
     rm -rf ./exports/debian/11/*
+    rm -rf ./exports/ubuntu/22.04/*
 
     cp ./debian/11/pkgbuild/*.deb ./exports/debian/11/
+    cp ./ubuntu/22.04/pkgbuild/*.deb ./exports/ubuntu/22.04/
 else
-    echo "Debian failed. Return code: $?"
+    echo "Build failed. Return code: $?"
 fi

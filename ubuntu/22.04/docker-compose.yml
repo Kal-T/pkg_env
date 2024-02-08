@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+
+  rhel8:
+    image: ikal/oss:ubuntu22.04
+    container_name: rpm_env_ubuntu22
+    volumes:
+      - ./pkgbuild:/home/dat/pkgbuild
+    command: tail -f /dev/null

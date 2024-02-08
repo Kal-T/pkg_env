@@ -54,6 +54,7 @@ manager_src_name="jobarranger-manager-$1"
 
 if [ -d "./src/$manager_src_name" ]; then
     cp -R ./src/$manager_src_name/* ./debian/11/pkgbuild/manager/src/
+    cp -R ./src/$manager_src_name/* ./ubuntu/22.04/pkgbuild/manager/src/
 else
     echo "There is no source in $manager_src_name directory. Cannot copy for manager source file."
 fi
@@ -66,9 +67,18 @@ else
 fi
 
 if [ $? -eq 0 ]; then
+    ./ubuntu/22.04/build_manager.sh
+else
+    echo "ubuntu22.04 failed. Return code: $?"
+    exit 69
+fi
+
+if [ $? -eq 0 ]; then
     rm -rf ./exports/debian/11/*
+    rm -rf ./exports/ubuntu/22.04/*
 
     cp ./debian/11/pkgbuild/*.deb ./exports/debian/11/
+    cp ./ubuntu/22.04/pkgbuild/*.deb ./exports/ubuntu/22.04/
 else
-    echo "Debian failed. Return code: $?"
+    echo "Build failed. Return code: $?"
 fi
