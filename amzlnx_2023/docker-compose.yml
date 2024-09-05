@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+
+  rhel8:
+    image: ikal/oss:rhel9
+    container_name: rpm_env_rhel9
+    volumes:
+      - ./rpmbuild:/home/dat/rpmbuild
